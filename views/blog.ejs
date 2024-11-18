@@ -1,0 +1,18 @@
+<%- include ("partials/header.ejs") %>
+
+
+<% if (locals.heading || locals.content) {%>
+    <h2><%= heading%></h2>
+    <h4><%= content%></h4>
+    
+    <% }else{ %>
+      <h1>Please Blog below 🤏</h1>
+      <% } %>
+
+<form action="/submit" method="POST">
+  <input name="name" type="text" id="myInput" class="feedback-input" placeholder="Subject" />
+  <textarea name="text" class="feedback-input1" placeholder="Write here.."></textarea>
+  <input type="submit" value="OK" />
+</form>
+<%- include ("partials/footer.ejs") %>
+
